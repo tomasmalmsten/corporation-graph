@@ -1,0 +1,767 @@
+2013-11-24 20:20:37.659+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2013-11-24 20:20:37.662+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    neostore.propertystore.db.mapped_memory=775M
+    neostore.nodestore.db.mapped_memory=215M
+    neostore.relationshipstore.db.mapped_memory=949M
+    neostore.propertystore.db.strings.mapped_memory=659M
+    store_dir=data/neo4j
+    neostore.propertystore.db.arrays.mapped_memory=747M
+2013-11-24 20:20:37.687+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2013-11-24 20:20:37.687+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 8,00 GB
+    Free Physical memory: 2,28 GB
+    Committed virtual memory: 3,58 GB
+    Total swap space: 1,00 GB
+    Free swap space: 1,00 GB
+2013-11-24 20:20:37.716+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 111,26 MB
+    Total memory: 199,17 MB
+    Max   memory: 742,44 MB
+    Garbage Collector: Copy: [Eden Space, Survivor Space]
+    Garbage Collector: MarkSweepCompact: [Eden Space, Survivor Space, Tenured Gen, Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=7,13 MB, used=6,42 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: Eden Space (Heap memory): committed=55,06 MB, used=5,53 MB, max=204,88 MB, threshold=?
+    Memory Pool: Survivor Space (Heap memory): committed=6,81 MB, used=0,00 B, max=25,56 MB, threshold=?
+    Memory Pool: Tenured Gen (Heap memory): committed=137,30 MB, used=82,38 MB, max=512,00 MB, threshold=0,00 B
+    Memory Pool: Perm Gen (Non-heap memory): committed=50,44 MB, used=50,19 MB, max=256,00 MB, threshold=0,00 B
+2013-11-24 20:20:37.772+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Mac OS X; version: 10.9; arch: x86_64; cpus: 8
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 159
+    Process id: 47629@Tomass-MacBook-Pro.local
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Copenhagen
+2013-11-24 20:20:37.778+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 23.21-b01
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Xmx768M, -Xms64M, -XX:PermSize=32m, -XX:MaxPermSize=256m, -Dfile.encoding=UTF-8, -Dgrails.home=/usr/local/opt/grails/libexec, -Dtools.jar=/Library/Java/JavaVirtualMachines/current/Contents/Home/lib/tools.jar, -Djava.net.preferIPv4Stack=true]
+2013-11-24 20:20:37.780+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-graph-algo/jars/neo4j-graph-algo-1.9.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-web/jars/grails-datastore-web-1.1.7.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-test/jars/grails-test-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-logging/jars/grails-logging-2.3.2.jar
+     [loader.1] file:/usr/local/Cellar/grails/2.3.2/libexec/lib/org.codehaus.groovy/groovy-all/jars/groovy-all-2.1.9.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-expression/jars/spring-expression-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-log4j/jars/grails-plugin-log4j-2.3.2.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/commons-cli/commons-cli/jars/commons-cli-1.2.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/jfr.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/jline/jline/jars/jline-2.11.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/com.h2database/h2/jars/h2-1.3.173.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-community/jars/neo4j-community-1.9.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-web/jars/spring-web-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-tx/jars/spring-tx-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-resources/jars/grails-resources-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/com.sun.jersey/jersey-core/bundles/jersey-core-1.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/com.google.code.gson/gson/jars/gson-2.2.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-controllers/jars/grails-plugin-controllers-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/junit/junit-dep/jars/junit-dep-4.10.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.geronimo.specs/geronimo-jta_1.1_spec/jars/geronimo-jta_1.1_spec-1.1.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/jars/hibernate-jpa-2.0-api-1.0.1.Final.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-databinding/jars/grails-plugin-databinding-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-digester/commons-digester/jars/commons-digester-1.8.1.jar
+     [classpath + loader.1] file:/System/Library/Java/Support/
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.eclipse.jdt.core.compiler/ecj/jars/ecj-3.7.2.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/rt.jar
+     [loader.2] file:/System/Library/Java/Extensions/QTJava.zip
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.codehaus.groovy/groovy-all/jars/groovy-all-2.1.9.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/xalan/serializer/jars/serializer-2.7.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-codecs/jars/grails-plugin-codecs-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-datasource/jars/grails-plugin-datasource-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-beanutils/commons-beanutils-core/jars/commons-beanutils-core-1.8.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-async/jars/grails-async-2.3.2.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.ivy/ivy/jars/ivy-2.3.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.lucene/lucene-core/jars/lucene-core-3.6.2.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/jce.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-el/commons-el/jars/commons-el-1.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-gsp/jars/grails-plugin-gsp-2.3.2.jar
+     [loader.2] file:/System/Library/Java/Extensions/libQTJNative.jnilib
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/xpp3/xpp3_min/jars/xpp3_min-1.1.4c.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-jmx/jars/neo4j-jmx-1.9.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.aspectj/aspectjweaver/jars/aspectjweaver-1.7.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-gorm/jars/grails-datastore-gorm-2.0.3.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/junit/junit/jars/junit-4.11.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.ant/ant/jars/ant-1.8.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.fusesource.jansi/jansi/jars/jansi-1.2.1.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+     [loader.0] file:/Library/Java/JavaVirtualMachines/current/Contents/Home/lib/tools.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/jars/concurrentlinkedhashmap-lru-1.3.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-validator/commons-validator/jars/commons-validator-1.3.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-bootstrap/jars/grails-bootstrap-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.scala-lang/scala-library/jars/scala-library-2.10.0.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-converters/jars/grails-plugin-converters-2.3.2.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/org.apache.ant/ant/jars/ant-1.8.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-filters/jars/grails-plugin-filters-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-jdbc/jars/spring-jdbc-3.2.4.RELEASE.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/resources.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-validation/jars/grails-plugin-validation-2.3.2.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/org.apache.ivy/ivy/jars/ivy-2.3.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-scripts/jars/grails-scripts-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-spring/jars/grails-spring-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-codec/commons-codec/jars/commons-codec-1.6.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/2.3.2/projects/ReUDD/resources/
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-core/jars/grails-datastore-core-2.0.3.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-core/jars/grails-core-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-web/jars/grails-web-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/taglibs/standard/jars/standard-1.1.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.0.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-aspects/jars/spring-aspects-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-lucene-index/jars/neo4j-lucene-index-1.9.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.9.7.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/asm/asm/jars/asm-3.3.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.objenesis/objenesis/jars/objenesis-1.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-mimetypes/jars/grails-plugin-mimetypes-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.codehaus.gpars/gpars/jars/gpars-1.1.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-context/jars/spring-context-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-cypher/jars/neo4j-cypher-1.9.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-context-support/jars/spring-context-support-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.ant/ant-junit/jars/ant-junit-1.8.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.codehaus.gant/gant_groovy1.8/jars/gant_groovy1.8-1.9.6.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/net.java.dev.jna/jna/jars/jna-4.0.0.jar
+     [loader.2] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-services/jars/grails-plugin-services-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-graph-matching/jars/neo4j-graph-matching-1.9.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-core/jars/spring-core-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-fileupload/commons-fileupload/jars/commons-fileupload-1.2.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j.3rdparty.javax.ws.rs/jsr311-api/jars/jsr311-api-1.1.2.r612.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-aop/jars/spring-aop-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/javax.servlet/jstl/jars/jstl-1.1.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.spockframework/spock-core/jars/spock-core-0.7-groovy-2.0.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/org.codehaus.gant/gant_groovy1.8/jars/gant_groovy1.8-1.9.6.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/classes
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/sunec.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/log4j/log4j/jars/log4j-1.2.17.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.tomcat/tomcat-jdbc/jars/tomcat-jdbc-7.0.42.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/org.fusesource.jansi/jansi/jars/jansi-1.2.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/2.3.2/projects/ReUDD/scriptCache/
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.ant/ant-trax/jars/ant-trax-1.7.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/net.java.dev.jna/jna/jars/jna-4.0.0.jar
+     [classpath + loader.0] file:/usr/local/opt/grails/libexec/lib/org.codehaus.groovy/groovy-all/jars/groovy-all-2.1.9.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-configuration/commons-configuration/jars/commons-configuration-1.6.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/charsets.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-test/jars/spring-test-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-simple/jars/grails-datastore-simple-2.0.3.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/server-api/jars/server-api-1.9.jar
+     [classpath + loader.0] file:/usr/local/opt/grails/libexec/dist/grails-bootstrap-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.tomcat.embed/tomcat-embed-logging-log4j/jars/tomcat-embed-logging-log4j-7.0.42.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/oro/oro/jars/oro-2.0.8.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/opensymphony/sitemesh/jars/sitemesh-2.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-kernel/jars/neo4j-kernel-1.9.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.aspectj/aspectjrt/jars/aspectjrt-1.7.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-gorm-neo4j/jars/grails-datastore-gorm-neo4j-1.0.1.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/sunrsasign.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-io/commons-io/jars/commons-io-2.1.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/localedata.jar
+     [loader.1] file:/usr/local/Cellar/grails/2.3.2/libexec/dist/grails-bootstrap-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-lang/commons-lang/jars/commons-lang-2.6.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/com.sun.jersey/jersey-client/bundles/jersey-client-1.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-beans/jars/spring-beans-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-servlets/jars/grails-plugin-servlets-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-webmvc/jars/spring-webmvc-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-udc/jars/neo4j-udc-1.9.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-url-mappings/jars/grails-plugin-url-mappings-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/jline/jline/jars/jline-2.11.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-i18n/jars/grails-plugin-i18n-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.eclipse.jetty.aggregate/jetty-all/jars/jetty-all-7.6.0.v20120127.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.9.7.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-rest/jars/grails-plugin-rest-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-testing/jars/grails-plugin-testing-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.ant/ant-launcher/jars/ant-launcher-1.8.4.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/jsse.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/JObjC.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-gorm-plugin-support/jars/grails-datastore-gorm-plugin-support-1.1.7.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-domain-class/jars/grails-plugin-domain-class-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-rest-graphdb/jars/neo4j-rest-graphdb-1.9.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/cglib/cglib/jars/cglib-2.2.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-beanutils/commons-beanutils/jars/commons-beanutils-1.8.3.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-databinding/jars/grails-databinding-2.3.2.jar
+2013-11-24 20:20:37.785+0000 INFO  [org.neo4j]: Library path:
+    /Users/tomasmalmsten/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    /Users/tomasmalmsten/code/corporations
+2013-11-24 20:20:37.785+0000 INFO  [org.neo4j]: System.properties:
+    sun.java.launcher = SUN_STANDARD
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.country.format = SE
+    grails.env.default = true
+    tools.jar = /Library/Java/JavaVirtualMachines/current/Contents/Home/lib/tools.jar
+    grails.env.initializing = true
+    grails.env = development
+    user.name = tomasmalmsten
+    user.language.format = sv
+    user.language = en
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib
+    user.timezone = Europe/Copenhagen
+    sun.arch.data.model = 64
+    jline.shutdownhook = false
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+    sun.jnu.encoding = UTF-8
+    file.encoding.pkg = sun.io
+    base.name = corporations
+    file.separator = /
+    grails.server.factory = org.grails.jetty.JettyServerFactory
+    user.country = US
+    grails.home = /usr/local/opt/grails/libexec
+    grails.version = 2.3.2
+    path.separator = :
+    grails.disable.exit = true
+    grails.env.set = true
+    sun.io.unicode.encoding = UnicodeBig
+    awt.toolkit = sun.lwawt.macosx.LWCToolkit
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    user.home = /Users/tomasmalmsten
+    program.name = grails
+    net.sf.ehcache.skipUpdateCheck = true
+    gopherProxySet = false
+    org.eclipse.jetty.xml.XmlParser.NotValidating = true
+    sun.java.command = org.codehaus.groovy.grails.cli.support.GrailsStarter --main org.codehaus.groovy.grails.cli.GrailsScriptRunner --conf /usr/local/opt/grails/libexec/conf/groovy-starter.conf --classpath 
+    base.dir = /Users/tomasmalmsten/code/corporations
+    sun.cpu.endian = little
+    sun.os.patch.level = unknown
+    user.dir = /Users/tomasmalmsten/code/corporations
+    grails.interactive.mode.enabled = true
+    groovy.starter.conf = /usr/local/opt/grails/libexec/conf/groovy-starter.conf
+    grails.debug.fork = false
+    file.encoding = UTF-8
+    grails.cli.args = 
+    TomcatKillSwitch.active = true
+    grails.buildScope = all
+2013-11-24 20:20:37.786+0000 INFO  [org.neo4j]: Network information:
+    Interface en1:
+        address: 10.0.1.2
+    Interface lo0:
+        address: 127.0.0.1
+2013-11-24 20:20:37.786+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2013-11-24 20:20:38.317+0000 INFO  [org.neo4j]: Creating new db @ data/neo4j/neostore
+2013-11-24 20:20:38.367+0000 INFO  [org.neo4j]: [data/neo4j/neostore.nodestore.db] brickCount=0 brickSize=2254437b mappedMem=225443840b (storeSize=0b)
+2013-11-24 20:20:38.392+0000 INFO  [org.neo4j]: data/neo4j/neostore.nodestore.db hit=1 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.411+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=38b)
+2013-11-24 20:20:38.414+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2013-11-24 20:20:38.414+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshiptypestore.db.names hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.416+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshiptypestore.db hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.418+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=38b)
+2013-11-24 20:20:38.418+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2013-11-24 20:20:38.418+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.strings] brickCount=0 brickSize=690944b mappedMem=691011584b (storeSize=128b)
+2013-11-24 20:20:38.418+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.index.keys] brickCount=0 brickSize=0b mappedMem=0b (storeSize=38b)
+2013-11-24 20:20:38.419+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.index] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2013-11-24 20:20:38.421+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.arrays] brickCount=0 brickSize=783232b mappedMem=783286272b (storeSize=128b)
+2013-11-24 20:20:38.424+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db] brickCount=0 brickSize=8126446b mappedMem=812646400b (storeSize=0b)
+2013-11-24 20:20:38.426+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshipstore.db] brickCount=0 brickSize=9950985b mappedMem=995098624b (storeSize=0b)
+2013-11-24 20:20:38.426+0000 INFO  [org.neo4j]: [data/neo4j/neostore.nodestore.db] brickCount=0 brickSize=225441b mappedMem=225443840b (storeSize=9b)
+2013-11-24 20:20:38.427+0000 INFO  [org.neo4j]: [data/neo4j/neostore] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2013-11-24 20:20:38.429+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshiptypestore.db.names hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.431+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshiptypestore.db hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.432+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.strings hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.433+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.index.keys hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.434+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.index hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.436+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.arrays hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.437+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.438+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshipstore.db hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.439+0000 INFO  [org.neo4j]: data/neo4j/neostore.nodestore.db hit=0 miss=0 switches=0 ooe=0
+2013-11-24 20:20:38.441+0000 INFO  [org.neo4j]: data/neo4j/neostore hit=0 miss=8 switches=0 ooe=0
+2013-11-24 20:20:38.445+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=38b)
+2013-11-24 20:20:38.445+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2013-11-24 20:20:38.446+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.strings] brickCount=0 brickSize=690944b mappedMem=691011584b (storeSize=128b)
+2013-11-24 20:20:38.446+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.index.keys] brickCount=0 brickSize=0b mappedMem=0b (storeSize=38b)
+2013-11-24 20:20:38.446+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.index] brickCount=0 brickSize=0b mappedMem=0b (storeSize=0b)
+2013-11-24 20:20:38.446+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.arrays] brickCount=0 brickSize=783232b mappedMem=783286272b (storeSize=128b)
+2013-11-24 20:20:38.447+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db] brickCount=0 brickSize=8126446b mappedMem=812646400b (storeSize=0b)
+2013-11-24 20:20:38.447+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshipstore.db] brickCount=0 brickSize=9950985b mappedMem=995098624b (storeSize=0b)
+2013-11-24 20:20:38.447+0000 INFO  [org.neo4j]: [data/neo4j/neostore.nodestore.db] brickCount=0 brickSize=225441b mappedMem=225443840b (storeSize=9b)
+2013-11-24 20:20:38.447+0000 INFO  [org.neo4j]: [data/neo4j/neostore] brickCount=0 brickSize=0b mappedMem=0b (storeSize=54b)
+2013-11-24 20:20:38.521+0000 INFO  [org.neo4j]: Opened logical log [data/neo4j/nioneo_logical.log.1] version=0, lastTxId=1 (clean)
+2013-11-24 20:20:38.549+0000 INFO  [org.neo4j]: TM new log: tm_tx_log.1
+2013-11-24 20:20:38.721+0000 INFO  [org.neo4j]: Opened logical log [data/neo4j/index/lucene.log.1] version=0, lastTxId=1 (clean)
+2013-11-24 20:20:38.729+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2013-11-24 20:20:38.729+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1385324438318, id:-4609288898219395446, store version: 13561656364791302]
+2013-11-24 20:20:38.729+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel 1.9.2
+2013-11-24 20:20:38.729+0000 INFO  [org.neo4j]: Neo4j component versions:
+2013-11-24 20:20:38.731+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel 1.9.2
+2013-11-24 20:20:38.731+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2013-11-24 20:20:38.734+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2013-11-24 20:20:38.734+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.0
+      NodeStore v0.A.0
+      RelationshipStore v0.A.0
+      RelationshipTypeStore v0.A.0
+      PropertyStore v0.A.0
+      PropertyIndexStore v0.A.0
+      StringPropertyStore v0.A.0
+      ArrayPropertyStore v0.A.0
+2013-11-24 20:20:38.734+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2013-11-24 20:20:38.735+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2013-11-24 20:20:38.735+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      NodeStore: used=1 high=0
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      PropertyStore: used=0 high=-1
+      PropertyIndexStore: used=0 high=-1
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+2013-11-24 20:20:38.735+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2013-11-24 20:20:38.735+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS START ---
+2013-11-24 20:20:38.735+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS END ---
+2013-11-24 20:20:38.736+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2013-11-24 20:20:38.736+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 499248103424 / 236836237312 / 47
+Storage files: (filename : modification date - size)
+      active_tx_log: 2013-11-24T21:20:38+0100 - 11,00 B
+      index:
+        lucene-store.db: 2013-11-24T21:20:38+0100 - 40,00 B
+        lucene.log.1: 2013-11-24T21:20:38+0100 - 16,00 B
+        lucene.log.active: 2013-11-24T21:20:38+0100 - 4,00 B
+      - Total: 2013-11-24T21:20:38+0100 - 60,00 B
+      lock: 2013-11-24T21:20:38+0100 - 0,00 B
+      messages.log: 2013-11-24T21:20:38+0100 - 28,90 kB
+      neostore: 2013-11-24T21:20:38+0100 - 54,00 B
+      neostore.id: 2013-11-24T21:20:38+0100 - 9,00 B
+      neostore.nodestore.db: 2013-11-24T21:20:38+0100 - 9,00 B
+      neostore.nodestore.db.id: 2013-11-24T21:20:38+0100 - 9,00 B
+      neostore.propertystore.db: 2013-11-24T21:20:38+0100 - 0,00 B
+      neostore.propertystore.db.arrays: 2013-11-24T21:20:38+0100 - 128,00 B
+      neostore.propertystore.db.arrays.id: 2013-11-24T21:20:38+0100 - 9,00 B
+      neostore.propertystore.db.id: 2013-11-24T21:20:38+0100 - 9,00 B
+      neostore.propertystore.db.index: 2013-11-24T21:20:38+0100 - 0,00 B
+      neostore.propertystore.db.index.id: 2013-11-24T21:20:38+0100 - 9,00 B
+      neostore.propertystore.db.index.keys: 2013-11-24T21:20:38+0100 - 38,00 B
+      neostore.propertystore.db.index.keys.id: 2013-11-24T21:20:38+0100 - 9,00 B
+      neostore.propertystore.db.strings: 2013-11-24T21:20:38+0100 - 128,00 B
+      neostore.propertystore.db.strings.id: 2013-11-24T21:20:38+0100 - 9,00 B
+      neostore.relationshipstore.db: 2013-11-24T21:20:38+0100 - 0,00 B
+      neostore.relationshipstore.db.id: 2013-11-24T21:20:38+0100 - 9,00 B
+      neostore.relationshiptypestore.db: 2013-11-24T21:20:38+0100 - 0,00 B
+      neostore.relationshiptypestore.db.id: 2013-11-24T21:20:38+0100 - 9,00 B
+      neostore.relationshiptypestore.db.names: 2013-11-24T21:20:38+0100 - 38,00 B
+      neostore.relationshiptypestore.db.names.id: 2013-11-24T21:20:38+0100 - 9,00 B
+      nioneo_logical.log.1: 2013-11-24T21:20:38+0100 - 16,00 B
+      nioneo_logical.log.active: 2013-11-24T21:20:38+0100 - 4,00 B
+      store_lock: 2013-11-24T21:20:38+0100 - 0,00 B
+      tm_tx_log.1: 2013-11-24T21:20:38+0100 - 0,00 B
+2013-11-24 20:20:38.741+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2013-11-24 20:20:38.743+0000 INFO  [org.neo4j]: Started - database is now available
+2013-11-24 20:20:38.744+0000 INFO  [org.neo4j]: GC Monitor started. 
+2013-11-24 20:20:41.543+0000 INFO  [org.neo4j]: GC Monitor: Application threads blocked for an additional 376ms [total block time: 0.376s]
+2013-11-24 20:20:44.573+0000 INFO  [org.neo4j]: GC Monitor: Application threads blocked for an additional 411ms [total block time: 0.787s]
+2013-11-24 20:21:29.803+0000 INFO  [org.neo4j]: GC Monitor: Application threads blocked for an additional 622ms [total block time: 1.409s]
+2013-11-24 20:29:31.379+0000 INFO  [org.neo4j]: Stopping - database is now unavailable
+2013-11-24 20:29:31.379+0000 INFO  [org.neo4j]: GC Monitor stopped. 
+2013-11-24 20:29:31.386+0000 INFO  [org.neo4j]: Closed log data/neo4j/index/lucene.log
+2013-11-24 20:29:31.387+0000 INFO  [org.neo4j]: TM shutting down
+2013-11-24 20:29:31.726+0000 INFO  [org.neo4j]: Closed log data/neo4j/nioneo_logical.log
+2013-11-24 20:29:31.727+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshiptypestore.db.names hit=0 miss=10 switches=0 ooe=0
+2013-11-24 20:29:31.729+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshiptypestore.db hit=0 miss=10 switches=0 ooe=0
+2013-11-24 20:29:31.731+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.strings hit=9 miss=0 switches=0 ooe=0
+2013-11-24 20:29:31.732+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.index.keys hit=0 miss=14 switches=0 ooe=0
+2013-11-24 20:29:31.734+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.index hit=0 miss=12 switches=0 ooe=0
+2013-11-24 20:29:31.735+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.arrays hit=2 miss=0 switches=0 ooe=0
+2013-11-24 20:29:31.736+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db hit=75 miss=0 switches=0 ooe=0
+2013-11-24 20:29:31.738+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshipstore.db hit=80 miss=0 switches=0 ooe=0
+2013-11-24 20:29:31.739+0000 INFO  [org.neo4j]: data/neo4j/neostore.nodestore.db hit=78 miss=0 switches=0 ooe=0
+2013-11-24 20:29:31.741+0000 INFO  [org.neo4j]: data/neo4j/neostore hit=0 miss=49 switches=0 ooe=0
+2013-11-24 20:29:31.743+0000 INFO  [org.neo4j]: NeoStore closed
+2013-11-24 20:29:31.743+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2013-11-24 20:29:31.743+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
+2013-12-04 08:18:29.849+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics START ---
+2013-12-04 08:18:29.868+0000 INFO  [org.neo4j]: Neo4j Kernel properties:
+    neostore.propertystore.db.mapped_memory=775M
+    neostore.nodestore.db.mapped_memory=215M
+    neostore.relationshipstore.db.mapped_memory=949M
+    neostore.propertystore.db.strings.mapped_memory=659M
+    store_dir=data/neo4j
+    neostore.propertystore.db.arrays.mapped_memory=747M
+2013-12-04 08:18:29.886+0000 INFO  [org.neo4j]: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+    NETWORK
+2013-12-04 08:18:29.910+0000 INFO  [org.neo4j]: System memory information:
+    Total Physical memory: 8,00 GB
+    Free Physical memory: 185,40 MB
+    Committed virtual memory: 3,59 GB
+    Total swap space: 1,00 GB
+    Free swap space: 1,00 GB
+2013-12-04 08:18:29.943+0000 INFO  [org.neo4j]: JVM memory information:
+    Free  memory: 93,54 MB
+    Total memory: 199,04 MB
+    Max   memory: 742,44 MB
+    Garbage Collector: Copy: [Eden Space, Survivor Space]
+    Garbage Collector: MarkSweepCompact: [Eden Space, Survivor Space, Tenured Gen, Perm Gen]
+    Memory Pool: Code Cache (Non-heap memory): committed=6,81 MB, used=6,31 MB, max=48,00 MB, threshold=0,00 B
+    Memory Pool: Eden Space (Heap memory): committed=55,00 MB, used=16,56 MB, max=204,88 MB, threshold=?
+    Memory Pool: Survivor Space (Heap memory): committed=6,81 MB, used=3,89 MB, max=25,56 MB, threshold=?
+    Memory Pool: Tenured Gen (Heap memory): committed=137,23 MB, used=85,06 MB, max=512,00 MB, threshold=0,00 B
+    Memory Pool: Perm Gen (Non-heap memory): committed=50,44 MB, used=50,14 MB, max=256,00 MB, threshold=0,00 B
+2013-12-04 08:18:30.112+0000 INFO  [org.neo4j]: Operating system information:
+    Operating System: Mac OS X; version: 10.9; arch: x86_64; cpus: 8
+    Max number of file descriptors: 10240
+    Number of open file descriptors: 159
+    Process id: 11243@Tomass-MacBook-Pro.local
+    Byte order: LITTLE_ENDIAN
+    Local timezone: Europe/Copenhagen
+2013-12-04 08:18:30.116+0000 INFO  [org.neo4j]: JVM information:
+    VM Name: Java HotSpot(TM) 64-Bit Server VM
+    VM Vendor: Oracle Corporation
+    VM Version: 23.21-b01
+    JIT compiler: HotSpot 64-Bit Tiered Compilers
+    VM Arguments: [-Xmx768M, -Xms64M, -XX:PermSize=32m, -XX:MaxPermSize=256m, -Dfile.encoding=UTF-8, -Dgrails.home=/usr/local/opt/grails/libexec, -Dtools.jar=/Library/Java/JavaVirtualMachines/current/Contents/Home/lib/tools.jar, -Djava.net.preferIPv4Stack=true]
+2013-12-04 08:18:30.137+0000 INFO  [org.neo4j]: Java classpath:
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-web/jars/grails-datastore-web-1.1.7.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-test/jars/grails-test-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-logging/jars/grails-logging-2.3.2.jar
+     [loader.1] file:/usr/local/Cellar/grails/2.3.2/libexec/lib/org.codehaus.groovy/groovy-all/jars/groovy-all-2.1.9.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.3.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-expression/jars/spring-expression-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-log4j/jars/grails-plugin-log4j-2.3.2.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/commons-cli/commons-cli/jars/commons-cli-1.2.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/jfr.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/jline/jline/jars/jline-2.11.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/com.h2database/h2/jars/h2-1.3.173.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-web/jars/spring-web-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-tx/jars/spring-tx-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-resources/jars/grails-resources-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/com.sun.jersey/jersey-core/bundles/jersey-core-1.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/com.google.code.gson/gson/jars/gson-2.2.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-controllers/jars/grails-plugin-controllers-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/junit/junit-dep/jars/junit-dep-4.10.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.geronimo.specs/geronimo-jta_1.1_spec/jars/geronimo-jta_1.1_spec-1.1.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/jars/hibernate-jpa-2.0-api-1.0.1.Final.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-databinding/jars/grails-plugin-databinding-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-digester/commons-digester/jars/commons-digester-1.8.1.jar
+     [classpath + loader.1] file:/System/Library/Java/Support/
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.eclipse.jdt.core.compiler/ecj/jars/ecj-3.7.2.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/rt.jar
+     [loader.2] file:/System/Library/Java/Extensions/QTJava.zip
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.codehaus.groovy/groovy-all/jars/groovy-all-2.1.9.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/xalan/serializer/jars/serializer-2.7.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-codecs/jars/grails-plugin-codecs-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-datasource/jars/grails-plugin-datasource-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-beanutils/commons-beanutils-core/jars/commons-beanutils-core-1.8.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-async/jars/grails-async-2.3.2.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.ivy/ivy/jars/ivy-2.3.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.lucene/lucene-core/jars/lucene-core-3.6.2.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/jce.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-el/commons-el/jars/commons-el-1.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-gsp/jars/grails-plugin-gsp-2.3.2.jar
+     [loader.2] file:/System/Library/Java/Extensions/libQTJNative.jnilib
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/xpp3/xpp3_min/jars/xpp3_min-1.1.4c.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.aspectj/aspectjweaver/jars/aspectjweaver-1.7.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-gorm/jars/grails-datastore-gorm-2.0.3.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/junit/junit/jars/junit-4.11.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-kernel/jars/neo4j-kernel-1.9.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.ant/ant/jars/ant-1.8.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.fusesource.jansi/jansi/jars/jansi-1.2.1.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+     [loader.0] file:/Library/Java/JavaVirtualMachines/current/Contents/Home/lib/tools.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/jars/concurrentlinkedhashmap-lru-1.3.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-validator/commons-validator/jars/commons-validator-1.3.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-bootstrap/jars/grails-bootstrap-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.scala-lang/scala-library/jars/scala-library-2.10.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.mockito/mockito-core/jars/mockito-core-1.9.5.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-converters/jars/grails-plugin-converters-2.3.2.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/org.apache.ant/ant/jars/ant-1.8.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-filters/jars/grails-plugin-filters-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-jdbc/jars/spring-jdbc-3.2.4.RELEASE.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/resources.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-validation/jars/grails-plugin-validation-2.3.2.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/org.apache.ivy/ivy/jars/ivy-2.3.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-scripts/jars/grails-scripts-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-spring/jars/grails-spring-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-codec/commons-codec/jars/commons-codec-1.6.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/2.3.2/projects/ReUDD/resources/
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-core/jars/grails-datastore-core-2.0.3.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-udc/jars/neo4j-udc-1.9.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-core/jars/grails-core-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-web/jars/grails-web-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/taglibs/standard/jars/standard-1.1.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.hamcrest/hamcrest-all/jars/hamcrest-all-1.3.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.0.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-aspects/jars/spring-aspects-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-graph-algo/jars/neo4j-graph-algo-1.9.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.9.7.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/asm/asm/jars/asm-3.3.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.objenesis/objenesis/jars/objenesis-1.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-community/jars/neo4j-community-1.9.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-mimetypes/jars/grails-plugin-mimetypes-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.codehaus.gpars/gpars/jars/gpars-1.1.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-context/jars/spring-context-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-context-support/jars/spring-context-support-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.ant/ant-junit/jars/ant-junit-1.8.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.codehaus.gant/gant_groovy1.8/jars/gant_groovy1.8-1.9.6.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/net.java.dev.jna/jna/jars/jna-4.0.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-jmx/jars/neo4j-jmx-1.9.5.jar
+     [loader.2] file:/System/Library/Java/Extensions/MRJToolkit.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-services/jars/grails-plugin-services-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-core/jars/spring-core-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-fileupload/commons-fileupload/jars/commons-fileupload-1.2.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j.3rdparty.javax.ws.rs/jsr311-api/jars/jsr311-api-1.1.2.r612.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-aop/jars/spring-aop-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/javax.servlet/jstl/jars/jstl-1.1.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.spockframework/spock-core/jars/spock-core-0.7-groovy-2.0.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/org.codehaus.gant/gant_groovy1.8/jars/gant_groovy1.8-1.9.6.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/classes
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/sunec.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/log4j/log4j/jars/log4j-1.2.17.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.tomcat/tomcat-jdbc/jars/tomcat-jdbc-7.0.42.jar
+     [loader.0] file:/usr/local/opt/grails/libexec/lib/org.fusesource.jansi/jansi/jars/jansi-1.2.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/2.3.2/projects/ReUDD/scriptCache/
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.ant/ant-trax/jars/ant-trax-1.7.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-cypher/jars/neo4j-cypher-1.9.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/net.java.dev.jna/jna/jars/jna-4.0.0.jar
+     [classpath + loader.0] file:/usr/local/opt/grails/libexec/lib/org.codehaus.groovy/groovy-all/jars/groovy-all-2.1.9.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-configuration/commons-configuration/jars/commons-configuration-1.6.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/charsets.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-test/jars/spring-test-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-simple/jars/grails-datastore-simple-2.0.3.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/server-api/jars/server-api-1.9.jar
+     [classpath + loader.0] file:/usr/local/opt/grails/libexec/dist/grails-bootstrap-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.tomcat.embed/tomcat-embed-logging-log4j/jars/tomcat-embed-logging-log4j-7.0.42.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/oro/oro/jars/oro-2.0.8.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/opensymphony/sitemesh/jars/sitemesh-2.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.aspectj/aspectjrt/jars/aspectjrt-1.7.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-gorm-neo4j/jars/grails-datastore-gorm-neo4j-1.0.1.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/sunrsasign.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-io/commons-io/jars/commons-io-2.1.jar
+     [loader.2] file:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext/localedata.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-graph-matching/jars/neo4j-graph-matching-1.9.5.jar
+     [loader.1] file:/usr/local/Cellar/grails/2.3.2/libexec/dist/grails-bootstrap-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-lang/commons-lang/jars/commons-lang-2.6.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/com.sun.jersey/jersey-client/bundles/jersey-client-1.4.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-beans/jars/spring-beans-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-servlets/jars/grails-plugin-servlets-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.springframework/spring-webmvc/jars/spring-webmvc-3.2.4.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-lucene-index/jars/neo4j-lucene-index-1.9.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-url-mappings/jars/grails-plugin-url-mappings-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/jline/jline/jars/jline-2.11.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-i18n/jars/grails-plugin-i18n-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.eclipse.jetty.aggregate/jetty-all/jars/jetty-all-7.6.0.v20120127.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.9.7.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-rest/jars/grails-plugin-rest-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-testing/jars/grails-plugin-testing-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.apache.ant/ant-launcher/jars/ant-launcher-1.8.4.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/jsse.jar
+     [bootstrap] /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/JObjC.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-datastore-gorm-plugin-support/jars/grails-datastore-gorm-plugin-support-1.1.7.RELEASE.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-plugin-domain-class/jars/grails-plugin-domain-class-2.3.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.neo4j/neo4j-rest-graphdb/jars/neo4j-rest-graphdb-1.9.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/cglib/cglib/jars/cglib-2.2.2.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.5.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/commons-beanutils/commons-beanutils/jars/commons-beanutils-1.8.3.jar
+     [loader.0] file:/Users/tomasmalmsten/.grails/ivy-cache/org.grails/grails-databinding/jars/grails-databinding-2.3.2.jar
+2013-12-04 08:18:30.158+0000 INFO  [org.neo4j]: Library path:
+    /Users/tomasmalmsten/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    /Users/tomasmalmsten/code/corporations
+2013-12-04 08:18:30.159+0000 INFO  [org.neo4j]: System.properties:
+    sun.java.launcher = SUN_STANDARD
+    sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+    user.country.format = SE
+    grails.env.default = true
+    tools.jar = /Library/Java/JavaVirtualMachines/current/Contents/Home/lib/tools.jar
+    grails.env.initializing = true
+    grails.env = development
+    user.name = tomasmalmsten
+    user.language.format = sv
+    user.language = en
+    sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib
+    user.timezone = Europe/Copenhagen
+    sun.arch.data.model = 64
+    jline.shutdownhook = false
+    http.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    sun.cpu.isalist = 
+    sun.jnu.encoding = UTF-8
+    file.encoding.pkg = sun.io
+    base.name = corporations
+    file.separator = /
+    grails.server.factory = org.grails.jetty.JettyServerFactory
+    user.country = US
+    grails.home = /usr/local/opt/grails/libexec
+    grails.version = 2.3.2
+    path.separator = :
+    grails.disable.exit = true
+    grails.env.set = true
+    sun.io.unicode.encoding = UnicodeBig
+    awt.toolkit = sun.lwawt.macosx.LWCToolkit
+    socksNonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    ftp.nonProxyHosts = local|*.local|169.254/16|*.169.254/16
+    user.home = /Users/tomasmalmsten
+    program.name = grails
+    net.sf.ehcache.skipUpdateCheck = true
+    gopherProxySet = false
+    org.eclipse.jetty.xml.XmlParser.NotValidating = true
+    sun.java.command = org.codehaus.groovy.grails.cli.support.GrailsStarter --main org.codehaus.groovy.grails.cli.GrailsScriptRunner --conf /usr/local/opt/grails/libexec/conf/groovy-starter.conf --classpath 
+    base.dir = /Users/tomasmalmsten/code/corporations
+    sun.cpu.endian = little
+    sun.os.patch.level = unknown
+    user.dir = /Users/tomasmalmsten/code/corporations
+    grails.interactive.mode.enabled = true
+    groovy.starter.conf = /usr/local/opt/grails/libexec/conf/groovy-starter.conf
+    grails.debug.fork = false
+    file.encoding = UTF-8
+    grails.cli.args = 
+    TomcatKillSwitch.active = true
+    grails.buildScope = all
+2013-12-04 08:18:30.160+0000 INFO  [org.neo4j]: Network information:
+    Interface en1:
+        address: 192.168.1.8
+    Interface lo0:
+        address: 127.0.0.1
+2013-12-04 08:18:30.161+0000 INFO  [org.neo4j]: --- INITIALIZED diagnostics END ---
+2013-12-04 08:18:31.216+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshiptypestore.db.names] brickCount=0 brickSize=0b mappedMem=0b (storeSize=418b)
+2013-12-04 08:18:31.243+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshiptypestore.db] brickCount=0 brickSize=0b mappedMem=0b (storeSize=50b)
+2013-12-04 08:18:31.266+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.strings] brickCount=0 brickSize=690944b mappedMem=691011584b (storeSize=1280b)
+2013-12-04 08:18:31.285+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.index.keys] brickCount=0 brickSize=0b mappedMem=0b (storeSize=570b)
+2013-12-04 08:18:31.328+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.index] brickCount=0 brickSize=0b mappedMem=0b (storeSize=108b)
+2013-12-04 08:18:31.331+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db.arrays] brickCount=0 brickSize=783232b mappedMem=783286272b (storeSize=384b)
+2013-12-04 08:18:31.362+0000 INFO  [org.neo4j]: [data/neo4j/neostore.propertystore.db] brickCount=0 brickSize=812620b mappedMem=812646400b (storeSize=1353b)
+2013-12-04 08:18:31.411+0000 INFO  [org.neo4j]: [data/neo4j/neostore.relationshipstore.db] brickCount=0 brickSize=995082b mappedMem=995098624b (storeSize=924b)
+2013-12-04 08:18:31.434+0000 INFO  [org.neo4j]: [data/neo4j/neostore.nodestore.db] brickCount=0 brickSize=225441b mappedMem=225443840b (storeSize=180b)
+2013-12-04 08:18:31.443+0000 INFO  [org.neo4j]: [data/neo4j/neostore] brickCount=0 brickSize=0b mappedMem=0b (storeSize=54b)
+2013-12-04 08:18:31.507+0000 INFO  [org.neo4j]: Opened logical log [data/neo4j/nioneo_logical.log.1] version=1, lastTxId=34 (clean)
+2013-12-04 08:18:31.611+0000 INFO  [org.neo4j]: TM opening log: data/neo4j/tm_tx_log.1
+2013-12-04 08:18:31.845+0000 INFO  [org.neo4j]: Opened logical log [data/neo4j/index/lucene.log.1] version=1, lastTxId=13 (clean)
+2013-12-04 08:18:31.887+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions START ---
+2013-12-04 08:18:31.887+0000 INFO  [org.neo4j]: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1385324438318, id:-4609288898219395446, store version: 13561656364791302]
+2013-12-04 08:18:31.888+0000 INFO  [org.neo4j]: Kernel version: Neo4j - Graph Database Kernel 1.9.5
+2013-12-04 08:18:31.888+0000 INFO  [org.neo4j]: Neo4j component versions:
+2013-12-04 08:18:31.889+0000 INFO  [org.neo4j]:   Neo4j - Graph Database Kernel 1.9.5
+2013-12-04 08:18:31.889+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:Versions END ---
+2013-12-04 08:18:31.900+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS START ---
+2013-12-04 08:18:31.900+0000 INFO  [org.neo4j]: Store versions:
+    Store versions:
+      NeoStore v0.A.0
+      NodeStore v0.A.0
+      RelationshipStore v0.A.0
+      RelationshipTypeStore v0.A.0
+      PropertyStore v0.A.0
+      PropertyIndexStore v0.A.0
+      StringPropertyStore v0.A.0
+      ArrayPropertyStore v0.A.0
+2013-12-04 08:18:31.900+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_VERSIONS END ---
+2013-12-04 08:18:31.900+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE START ---
+2013-12-04 08:18:31.900+0000 INFO  [org.neo4j]: Id usage:
+    Id usage:
+      NodeStore: used=20 high=19
+      RelationshipStore: used=28 high=27
+      RelationshipTypeStore: used=10 high=9
+      PropertyStore: used=33 high=32
+      PropertyIndexStore: used=12 high=11
+      StringPropertyStore: used=10 high=9
+      ArrayPropertyStore: used=3 high=2
+2013-12-04 08:18:31.901+0000 INFO  [org.neo4j]: --- STARTED diagnostics for NEO_STORE_ID_USAGE END ---
+2013-12-04 08:18:31.901+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS START ---
+2013-12-04 08:18:31.901+0000 INFO  [org.neo4j]: --- STARTED diagnostics for PERSISTENCE_WINDOW_POOL_STATS END ---
+2013-12-04 08:18:31.902+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles START ---
+2013-12-04 08:18:31.902+0000 INFO  [org.neo4j]: Disk space on partition (Total / Free / Free %): 499248103424 / 235303706624 / 47
+Storage files: (filename : modification date - size)
+      active_tx_log: 2013-11-24T21:20:38+0100 - 11,00 B
+      index:
+        lucene:
+          node:
+            node_auto_index:
+              segments.gen: 2013-11-24T21:29:31+0100 - 20,00 B
+              segments_1: 2013-11-24T21:29:31+0100 - 32,00 B
+            - Total: 2013-11-24T21:29:31+0100 - 52,00 B
+          - Total: 2013-11-24T21:23:07+0100 - 52,00 B
+        - Total: 2013-11-24T21:23:07+0100 - 52,00 B
+        lucene-store.db: 2013-11-24T21:29:31+0100 - 40,00 B
+        lucene.log.1: 2013-12-04T09:18:31+0100 - 16,00 B
+        lucene.log.active: 2013-12-04T09:18:31+0100 - 4,00 B
+        lucene.log.v0: 2013-11-24T21:29:31+0100 - 2,54 kB
+      - Total: 2013-12-04T09:18:31+0100 - 2,65 kB
+      index.db: 2013-11-24T21:23:07+0100 - 123,00 B
+      lock: 2013-12-04T09:18:31+0100 - 0,00 B
+      messages.log: 2013-12-04T09:18:31+0100 - 59,63 kB
+      neostore: 2013-12-04T09:18:31+0100 - 54,00 B
+      neostore.id: 2013-12-04T09:18:31+0100 - 9,00 B
+      neostore.nodestore.db: 2013-12-04T09:18:31+0100 - 180,00 B
+      neostore.nodestore.db.id: 2013-12-04T09:18:31+0100 - 9,00 B
+      neostore.propertystore.db: 2013-12-04T09:18:31+0100 - 1,32 kB
+      neostore.propertystore.db.arrays: 2013-12-04T09:18:31+0100 - 384,00 B
+      neostore.propertystore.db.arrays.id: 2013-12-04T09:18:31+0100 - 9,00 B
+      neostore.propertystore.db.id: 2013-12-04T09:18:31+0100 - 9,00 B
+      neostore.propertystore.db.index: 2013-12-04T09:18:31+0100 - 108,00 B
+      neostore.propertystore.db.index.id: 2013-12-04T09:18:31+0100 - 9,00 B
+      neostore.propertystore.db.index.keys: 2013-12-04T09:18:31+0100 - 570,00 B
+      neostore.propertystore.db.index.keys.id: 2013-12-04T09:18:31+0100 - 9,00 B
+      neostore.propertystore.db.strings: 2013-12-04T09:18:31+0100 - 1,25 kB
+      neostore.propertystore.db.strings.id: 2013-12-04T09:18:31+0100 - 9,00 B
+      neostore.relationshipstore.db: 2013-12-04T09:18:31+0100 - 924,00 B
+      neostore.relationshipstore.db.id: 2013-12-04T09:18:31+0100 - 9,00 B
+      neostore.relationshiptypestore.db: 2013-12-04T09:18:31+0100 - 50,00 B
+      neostore.relationshiptypestore.db.id: 2013-12-04T09:18:31+0100 - 9,00 B
+      neostore.relationshiptypestore.db.names: 2013-12-04T09:18:31+0100 - 418,00 B
+      neostore.relationshiptypestore.db.names.id: 2013-12-04T09:18:31+0100 - 9,00 B
+      nioneo_logical.log.1: 2013-12-04T09:18:31+0100 - 16,00 B
+      nioneo_logical.log.active: 2013-12-04T09:18:31+0100 - 4,00 B
+      nioneo_logical.log.v0: 2013-11-24T21:29:31+0100 - 14,42 kB
+      store_lock: 2013-11-24T21:20:38+0100 - 0,00 B
+      tm_tx_log.1: 2013-12-04T09:18:31+0100 - 0,00 B
+2013-12-04 08:18:31.911+0000 INFO  [org.neo4j]: --- STARTED diagnostics for KernelDiagnostics:StoreFiles END ---
+2013-12-04 08:18:31.914+0000 INFO  [org.neo4j]: GC Monitor started. 
+2013-12-04 08:18:31.924+0000 INFO  [org.neo4j]: Database is now ready
+2013-12-04 08:18:35.406+0000 INFO  [org.neo4j]: GC Monitor: Application threads blocked for an additional 441ms [total block time: 0.441s]
+2013-12-04 08:18:38.062+0000 INFO  [org.neo4j]: GC Monitor: Application threads blocked for an additional 439ms [total block time: 0.88s]
+2013-12-04 08:19:37.238+0000 INFO  [org.neo4j]: GC Monitor: Application threads blocked for an additional 645ms [total block time: 1.525s]
+2013-12-04 08:36:58.185+0000 INFO  [org.neo4j]: Shutdown started
+2013-12-04 08:36:58.270+0000 INFO  [org.neo4j]: Database is no longer ready
+2013-12-04 08:36:58.270+0000 INFO  [org.neo4j]: GC Monitor stopped. 
+2013-12-04 08:36:58.321+0000 INFO  [org.neo4j]: Closed log data/neo4j/index/lucene.log
+2013-12-04 08:36:58.348+0000 INFO  [org.neo4j]: TM shutting down
+2013-12-04 08:36:58.625+0000 INFO  [org.neo4j]: Closed log data/neo4j/nioneo_logical.log
+2013-12-04 08:36:58.625+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshiptypestore.db.names hit=0 miss=25 switches=0 ooe=0
+2013-12-04 08:36:58.627+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshiptypestore.db hit=0 miss=15 switches=0 ooe=0
+2013-12-04 08:36:58.629+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.strings hit=60 miss=0 switches=0 ooe=0
+2013-12-04 08:36:58.646+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.index.keys hit=0 miss=28 switches=0 ooe=0
+2013-12-04 08:36:58.648+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.index hit=0 miss=12 switches=0 ooe=0
+2013-12-04 08:36:58.650+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db.arrays hit=13 miss=0 switches=0 ooe=0
+2013-12-04 08:36:58.652+0000 INFO  [org.neo4j]: data/neo4j/neostore.propertystore.db hit=247 miss=0 switches=0 ooe=0
+2013-12-04 08:36:58.670+0000 INFO  [org.neo4j]: data/neo4j/neostore.relationshipstore.db hit=349 miss=0 switches=0 ooe=0
+2013-12-04 08:36:58.673+0000 INFO  [org.neo4j]: data/neo4j/neostore.nodestore.db hit=301 miss=0 switches=0 ooe=0
+2013-12-04 08:36:58.674+0000 INFO  [org.neo4j]: data/neo4j/neostore hit=0 miss=65 switches=0 ooe=0
+2013-12-04 08:36:58.676+0000 INFO  [org.neo4j]: NeoStore closed
+2013-12-04 08:36:58.676+0000 INFO  [org.neo4j]: --- STOPPING diagnostics START ---
+2013-12-04 08:36:58.676+0000 INFO  [org.neo4j]: --- STOPPING diagnostics END ---
